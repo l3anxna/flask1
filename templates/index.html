@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Plotter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Function Plotter</h1>
+    <form method="POST">
+        <label for="function">Select Function:</label>
+        <select name="function" id="function">
+            <option value="sin">sin</option>
+            <option value="cos">cos</option>
+            <option value="x^2">x^2</option>
+            <option value="sqrt">sqrt(x)</option>
+        </select><br><br>
+
+        <label for="x_from">X From:</label>
+        <input type="number" name="x_from" required><br><br>
+
+        <label for="x_to">X To:</label>
+        <input type="number" name="x_to" required><br><br>
+
+        <label for="color">Select Color:</label>
+        <input type="color" name="color" value="#0000ff"><br><br>
+
+        <label for="hist_data">Enter comma-separated values for histogram:</label><br>
+        <input type="text" name="hist_data"><br><br>
+
+        <input type="submit" value="Line Graph">
+        <input type="submit" name="action" value="Histogram">
+    </form>
+</body>
+</html>
